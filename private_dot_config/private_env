@@ -1,0 +1,7 @@
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+
+export GITHUB_USERNAME="hugdubois"
+export PATH="$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':'):$PATH"
+
+export GOPATH=$HOME/.local/share/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH

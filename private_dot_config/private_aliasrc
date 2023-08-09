@@ -1,0 +1,8 @@
+alias cls="clear"
+
+alias vim="nvim" \
+ v="nvim"
+
+alias ls="exa" \
+ ll="exa --icons -l --no-user --git" \
+ la="ll -a"
