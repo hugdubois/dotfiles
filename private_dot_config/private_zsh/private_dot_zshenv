@@ -1,0 +1,6 @@
+GITHUB_USERNAME="hugdubois"
+PATH="$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':'):$PATH"
+
+GOPATH=$HOME/.local/share/go
+PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+eval $(go env)

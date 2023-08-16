@@ -1,8 +1,38 @@
 alias cls="clear"
 
-alias vim="nvim" \
- v="nvim"
+# Use neovim for vim if present.
+command -v nvim >/dev/null && \
+  alias vim="nvim" \
+   vimdiff="nvim -d"
+   v="nvim" \
+   e="nvim"
 
 alias ls="exa" \
  ll="exa --icons -l --no-user --git" \
- la="ll -a"
+ la="ll -a" \
+ show="bat"
+
+# Git alias
+alias g="git" \
+  gd="git diff" \
+  gs="git status" \
+  ga="git add" \
+  gc="git commit" \
+  gca="git commit --amend" \
+  gcane="git commit --amend --no-edit" \ \
+  gco="git checkout" \
+  gb="git branch" \
+  gba="git branch --all" \
+  gbd="git branch -D " \
+  gbdr="git push origin --delete " \
+  gr="git reset" \
+  gl="git log" \
+  gp="git push" \
+  gpl="git pull" \
+  gf="git fetch" \
+  gfp="git fetch -p" \
+  gfa="git fetch --all" \
+  gpomain="git push origin master" \
+  gpomaster="git push origin master"
+
+
