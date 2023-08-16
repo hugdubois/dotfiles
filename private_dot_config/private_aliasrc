@@ -17,7 +17,9 @@ command -v nvim >/dev/null && \
     v="nvim" \
     e="nvim"
 
-alias tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf"
+alias tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
+  qq="tmux kill-session" \
+  qqq="tmux kill-server"
 
 # Use neovim for vim if present.
 command -v nvim >/dev/null && \
@@ -27,11 +29,11 @@ command -v nvim >/dev/null && \
    e="nvim"
 
 alias cfg="chezmoi" \
-  cfg-cat="chezmoi cat" \
-  cfg-cd="chezmoi cd" \
-  cfg-edit="chezmoi edit" \
-  cfg-diff="chezmoi diff" \
-  cfg-apply="chezmoi apply"
+  cfgcat="chezmoi cat" \
+  cfgcd="chezmoi cd" \
+  cfgedit="chezmoi edit" \
+  cfgdiff="chezmoi diff" \
+  cfgapply="chezmoi apply"
 
 alias ls="exa" \
   ll="exa --icons -l --no-user --git" \
