@@ -1,4 +1,23 @@
-alias cls="clear"
+alias cls="clear" \
+  ls="exa" \
+  ll="exa --icons -l --no-user --git" \
+  la="ll -a" \
+  show="bat" \
+  cp="cp -iv" \
+  mv="mv -iv" \
+  rm="rm -vI" \
+  mkd="mkdir -pv" \
+  q="exit" \
+  open="xdg-open"
+
+# Use neovim for vim if present.
+command -v nvim >/dev/null && \
+  alias vim="nvim" \
+    vimdiff="nvim -d"
+    v="nvim" \
+    e="nvim"
+
+alias tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf"
 
 # Use neovim for vim if present.
 command -v nvim >/dev/null && \
@@ -7,10 +26,16 @@ command -v nvim >/dev/null && \
    v="nvim" \
    e="nvim"
 
+alias cfg="chezmoi" \
+  cfg-cat="chezmoi cat" \
+  cfg-cd="chezmoi cd" \
+  cfg-edit="chezmoi edit" \
+  cfg-diff="chezmoi diff" \
+  cfg-apply="chezmoi apply"
+
 alias ls="exa" \
- ll="exa --icons -l --no-user --git" \
- la="ll -a" \
- show="bat"
+  ll="exa --icons -l --no-user --git" \
+  la="ll -a"
 
 # Git alias
 alias g="git" \
@@ -35,4 +60,9 @@ alias g="git" \
   gpomain="git push origin master" \
   gpomaster="git push origin master"
 
+alias \
+  pg-connect="sudo -u postgres psql " \
+  pg-start="sudo -u postgres pg_ctl -D /var/lib/postgresql/data start" \
+  pg-stop="sudo -u postgres pg_ctl -D /var/lib/postgresql/data stop"
 
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc-secret" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc-secret"
