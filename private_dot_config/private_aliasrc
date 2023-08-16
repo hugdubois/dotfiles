@@ -1,70 +1,73 @@
-alias cls="clear" \
-  ls="exa" \
-  ll="exa --icons -l --no-user --git" \
-  la="ll -a" \
-  show="bat" \
-  cp="cp -iv" \
-  mv="mv -iv" \
-  rm="rm -vI" \
-  mkd="mkdir -pv" \
-  q="exit" \
-  open="xdg-open"
+alias cls='clear' \
+  ls='exa' \
+  ll='exa --icons -l --no-user --git' \
+  la='ll -a' \
+  show='bat' \
+  cp='cp -iv' \
+  mv='mv -iv' \
+  rm='rm -vI' \
+  mkd='mkdir -pv' \
+  q='exit' \
+  ssa='eval $(ssh-agent) && ssh-add' \
+  reload='source ~/.zprofile' \
+  open='xdg-open'
 
 # Use neovim for vim if present.
 command -v nvim >/dev/null && \
-  alias vim="nvim" \
-    vimdiff="nvim -d"
-    v="nvim" \
-    e="nvim"
+  alias vim='nvim' \
+    vimdiff='nvim -d'
+    v='nvim' \
+    e='nvim'
 
-alias tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
-  qq="tmux kill-session" \
-  qqq="tmux kill-server"
+alias tmux='tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf' \
+  qq='tmux kill-session' \
+  qqq='tmux kill-server'
 
 # Use neovim for vim if present.
 command -v nvim >/dev/null && \
-  alias vim="nvim" \
-   vimdiff="nvim -d"
-   v="nvim" \
-   e="nvim"
+  alias vim='nvim' \
+   vimdiff='nvim -d'
+   v='nvim' \
+   e='nvim'
 
-alias cfg="chezmoi" \
-  cfgcat="chezmoi cat" \
-  cfgcd="chezmoi cd" \
-  cfgedit="chezmoi edit" \
-  cfgdiff="chezmoi diff" \
-  cfgapply="chezmoi apply"
+alias cfg='chezmoi' \
+  cfga='chezmoi apply && source ~/.zprofile' \
+  cfgs='chezmoi status' \
+  cfgcat='chezmoi cat' \
+  cfgcd='chezmoi cd' \
+  cfgd='chezmoi diff' \
+  cfge='chezmoi edit'
 
-alias ls="exa" \
-  ll="exa --icons -l --no-user --git" \
-  la="ll -a"
+alias ls='exa' \
+  ll='exa --icons -l --no-user --git' \
+  la='ll -a'
 
 # Git alias
-alias g="git" \
-  gd="git diff" \
-  gs="git status" \
-  ga="git add" \
-  gc="git commit" \
-  gca="git commit --amend" \
-  gcane="git commit --amend --no-edit" \ \
-  gco="git checkout" \
-  gb="git branch" \
-  gba="git branch --all" \
-  gbd="git branch -D " \
-  gbdr="git push origin --delete " \
-  gr="git reset" \
-  gl="git log" \
-  gp="git push" \
-  gpl="git pull" \
-  gf="git fetch" \
-  gfp="git fetch -p" \
-  gfa="git fetch --all" \
-  gpomain="git push origin master" \
-  gpomaster="git push origin master"
+alias g='git' \
+  gd='git diff' \
+  gs='git status' \
+  ga='git add' \
+  gc='git commit' \
+  gca='git commit --amend' \
+  gcane='git commit --amend --no-edit' \ \
+  gco='git checkout' \
+  gb='git branch' \
+  gba='git branch --all' \
+  gbd='git branch -D ' \
+  gbdr='git push origin --delete ' \
+  gr='git reset' \
+  gl='git log' \
+  gp='git push' \
+  gpl='git pull' \
+  gf='git fetch' \
+  gfp='git fetch -p' \
+  gfa='git fetch --all' \
+  gpomain='git push origin master' \
+  gpomaster='git push origin master'
 
 alias \
-  pg-connect="sudo -u postgres psql " \
-  pg-start="sudo -u postgres pg_ctl -D /var/lib/postgresql/data start" \
-  pg-stop="sudo -u postgres pg_ctl -D /var/lib/postgresql/data stop"
+  pg-connect='sudo -u postgres psql ' \
+  pg-start='sudo -u postgres pg_ctl -D /var/lib/postgresql/data start' \
+  pg-stop='sudo -u postgres pg_ctl -D /var/lib/postgresql/data stop'
 
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc-secret" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc-secret"
+[ -f '${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc-secret' ] && source '${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc-secret'
