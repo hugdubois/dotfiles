@@ -1,6 +1,14 @@
+EDITOR="nvim"
 GITHUB_USERNAME="hugdubois"
-PATH="$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':'):$PATH"
+GHQ_ROOT="$HOME/.local/share/pkgs/ghq"
+RESEND_API_KEY="re_VT7zushu_4Lr5i3cv7dEhngYV44hdbLfK" # export RESEND_API_KEY=$(pass RESEND_API_KEY)
+POP_FROM=hugdubois+dev@gmail.com
+POP_SIGNATURE="Sent with [Pop](https://github.com/charmbracelet/pop)!"
 
-GOPATH=$HOME/.local/share/go
-PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 eval $(go env)
+
+typeset -U path PATH
+path=(~/.local/bin $path)
+path=($GOPATH/bin $path)
+path=($GOROOT $path)
+export PATH

@@ -1,14 +1,1 @@
-export RESEND_API_KEY="re_VT7zushu_4Lr5i3cv7dEhngYV44hdbLfK" # export RESEND_API_KEY=$(pass RESEND_API_KEY)
-export POP_FROM=hugdubois+dev@gmail.com
-export POP_SIGNATURE="Sent with [Pop](https://github.com/charmbracelet/pop)!"
-
-# export GOPATH=$HOME/.local/share/go
-# export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-#
-# export ZIGPATH=$HOME/.local/share/zig/current
-# export PATH=$ZIGPATH:$PATH
-
-# [[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/env" ]] && . "${XDG_CONFIG_HOME:-$HOME/.config}/env"
-# [[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ]] && . "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
-
 [[ -f "$HOME/.zprofile" ]] && . "$HOME/.zprofile"

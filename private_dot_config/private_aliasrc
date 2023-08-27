@@ -1,3 +1,7 @@
+function lk {
+  cd "$(walk --icons "$@")"
+}
+
 alias cls='clear' \
   ls='exa' \
   ll='exa --icons -l --no-user --git' \
