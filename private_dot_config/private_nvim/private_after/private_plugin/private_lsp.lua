@@ -6,6 +6,7 @@ lsp.ensure_installed({
     --"tsserver",
     --"rust_analyzer",
     "gopls",
+    "templ",
 })
 
 -- Fix Undefined global "vim"
@@ -24,7 +25,13 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 })
 
 lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
+  mapping = cmp_mappings,
+  sources = {
+    { name = "buffer", group_index = 2 },
+    { name = "path", group_index = 2 },
+    { name = "luasnip", group_index = 2 },
+    { name = "nvim_lua", group_index = 2 },
+  },
 })
 
 lsp.set_preferences({

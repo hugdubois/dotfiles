@@ -23,17 +23,12 @@ command -v nvim >/dev/null && \
     v='nvim' \
     e='nvim'
 
+# tmux aliases
 alias tmux='tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf' \
   qq='tmux kill-session' \
   qqq='tmux kill-server'
 
-# Use neovim for vim if present.
-command -v nvim >/dev/null && \
-  alias vim='nvim' \
-   vimdiff='nvim -d'
-   v='nvim' \
-   e='nvim'
-
+# chezmoi aliases
 alias cfg='chezmoi' \
   cfga='chezmoi apply && source ~/.zprofile' \
   cfgs='chezmoi status' \
@@ -42,6 +37,7 @@ alias cfg='chezmoi' \
   cfgd='chezmoi diff' \
   cfge='chezmoi edit'
 
+# better core-utils
 alias ls='exa' \
   ll='exa --icons -l --no-user --git' \
   la='ll -a'
@@ -69,9 +65,39 @@ alias g='git' \
   gpomain='git push origin master' \
   gpomaster='git push origin master'
 
+# Postgres services
 alias \
   pg-connect='sudo -u postgres psql ' \
   pg-start='sudo -u postgres pg_ctl -D /var/lib/postgresql/data start' \
   pg-stop='sudo -u postgres pg_ctl -D /var/lib/postgresql/data stop'
+
+# Golang helpers
+alias gob='go build' \
+  goc='go clean' \
+  god='go doc' \
+  goe='go env' \
+  gof='go fmt' \
+  gofa='go fmt ./...' \
+  gofx='go fix' \
+  gog='go get' \
+  goga='go get ./...' \
+  goi='go install' \
+  gol='go list' \
+  gom='go mod' \
+  gopa='cd $GOPATH' \
+  gopb='cd $GOPATH/bin' \
+  gops='cd $GOPATH/src' \
+  gor='go run' \
+  gote='go test' \
+  got='go test ./...'
+  gotf='go test --fail-fast ./...'
+  gotnil='nilaway ./...' \
+  goto='go tool' \
+  gotoc='go tool compile' \
+  gotod='go tool dist' \
+  gotofx='go tool fix' \
+  gov='go vet' \
+  gove='go version' \
+  gow='go work'
 
 [ -f '${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc-secret' ] && source '${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc-secret'

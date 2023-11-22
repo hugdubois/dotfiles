@@ -82,7 +82,7 @@ return require("packer").startup(function(use)
 	  requires = { {"nvim-lua/plenary.nvim"} }
   })
   use("folke/zen-mode.nvim")
-  -- use("github/copilot.vim")
+  use("github/copilot.vim")
 
   use("ray-x/go.nvim")
   use("ray-x/guihua.lua")

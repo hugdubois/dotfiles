@@ -4,6 +4,7 @@ GHQ_ROOT="$HOME/.local/share/pkgs/ghq"
 RESEND_API_KEY="re_VT7zushu_4Lr5i3cv7dEhngYV44hdbLfK" # export RESEND_API_KEY=$(pass RESEND_API_KEY)
 POP_FROM=hugdubois+dev@gmail.com
 POP_SIGNATURE="Sent with [Pop](https://github.com/charmbracelet/pop)!"
+ANDROID_HOME="$HOME/Android/Sdk"
 
 eval $(go env)
 
@@ -11,4 +12,8 @@ typeset -U path PATH
 path=(~/.local/bin $path)
 path=($GOPATH/bin $path)
 path=($GOROOT $path)
+path=($ANDROID_HOME/build-tools/33.0.0/ $path)
+path=($ANDROID_HOME/cmake/bin $path)
+path=($ANDROID_HOME/platform-tools $path)
+path=($ANDROID_HOME/tools/bin $path)
 export PATH
