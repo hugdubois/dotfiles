@@ -12,7 +12,7 @@ alias cls='clear' \
   rm='rm -vI' \
   mkd='mkdir -pv' \
   q='exit' \
-  ssa='eval $(ssh-agent) && ssh-add' \
+  ssha='eval $(ssh-agent) && ssh-add' \
   reload='source ~/.zprofile' \
   open='xdg-open'
 
@@ -31,11 +31,12 @@ alias tmux='tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf' \
 # chezmoi aliases
 alias cfg='chezmoi' \
   cfga='chezmoi apply && source ~/.zprofile' \
-  cfgs='chezmoi status' \
+  cfgadd='chezmoi add' \
   cfgcat='chezmoi cat' \
   cfgcd='chezmoi cd' \
   cfgd='chezmoi diff' \
-  cfge='chezmoi edit'
+  cfge='chezmoi edit' \
+  cfgs='chezmoi status'
 
 # better core-utils
 alias ls='exa' \
@@ -101,5 +102,8 @@ alias gob='go build' \
   gov='go vet' \
   gove='go version' \
   gow='go work'
+
+# termux aliases
+alias pkgi='pkg list-installed'
 
 [ -f '${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc-secret' ] && source '${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc-secret'
