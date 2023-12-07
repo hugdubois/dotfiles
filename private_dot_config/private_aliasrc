@@ -31,6 +31,7 @@ alias tmux='tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf' \
 # chezmoi aliases
 alias cfg='chezmoi' \
   cfga='chezmoi apply && source ~/.zprofile' \
+  cfgreadd='chezmoi re-add' \
   cfgadd='chezmoi add' \
   cfgcat='chezmoi cat' \
   cfgcd='chezmoi cd' \
